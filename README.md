@@ -84,6 +84,44 @@ source venv/bin/activate
 pip install .
 ```
 
+### On Arch Linux
+
+#### 1. Install system dependencies
+
+```bash
+sudo pacman -S \
+    python-pip \
+    python-virtualenv \
+    gobject-introspection \
+    libcairo \
+    pkgconf \
+    gtk4 \
+    libadwaita
+```
+
+For `gtk4-layer-shell`, install from AUR:
+
+```bash
+yay -S libgtk4-layer-shell
+# or
+paru -S libgtk4-layer-shell
+```
+
+#### 2. Install Python package
+
+```bash
+# Clone the repository
+git clone https://github.com/EdenQwQ/waydeeper.git
+cd waydeeper
+
+# Create a virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate
+
+# Install waydeeper
+pip install .
+```
+
 ## Post-Installation
 
 ### Download the [MiDaS model](https://github.com/isl-org/MiDaS)
